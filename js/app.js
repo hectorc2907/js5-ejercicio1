@@ -3,7 +3,7 @@ document.getElementById('btnComenzar').onclick = function(){
     cambiarTextoPrincipal();
 }
 function generarNumeroAleatorio(){
-    let numeroAleatorio = Math.floor(Math.random()*2+1);
+    let numeroAleatorio = Math.floor(Math.random()*10+1);
     return numeroAleatorio;
 }
 console.log(generarNumeroAleatorio());
