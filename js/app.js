@@ -2,7 +2,6 @@ let numeroAleatorio = 0;
 let btnComenzarJuego = document.getElementById("btnComenzarJuego");
 btnComenzarJuego.addEventListener("click", function () {
   numeroAleatorio = Math.floor(Math.random() * 10) + 1;
-  console.log(numeroAleatorio);
   let msjComparar = document.getElementById("msjComparar");
   msjComparar.innerHTML = `Juego Iniciado`;
   let btnCompararNumero = document.getElementById("btnCompararNumero");
