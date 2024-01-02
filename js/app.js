@@ -1,24 +1,24 @@
-document.getElementById('btnComenzar').onclick = function(){
-    generarNumeroAleatorio();
-    cambiarTextoPrincipal();
-}
-function generarNumeroAleatorio(){
-    let numeroAleatorio = Math.floor(Math.random()*10+1);
-    return numeroAleatorio;
-}
-console.log(generarNumeroAleatorio());
-function cambiarTextoPrincipal(){
-    document.getElementById('textoInformativo').innerHTML = 'Se Genero el Numero Magico';
-}
-document.getElementById('btnNumero').onclick = function(){
-    compararNumeros();
-}
-function compararNumeros(){
-    let valor = document.getElementById('numeroGuardado').value;
-    console.log(valor)
-    if(valor == generarNumeroAleatorio()){
-        alert('Numeros Iguales');
-    }else{
-        alert('Numeros Distintos');
+let numeroAleatorio = 0;
+let btnComenzarJuego = document.getElementById("btnComenzarJuego");
+btnComenzarJuego.addEventListener("click", function () {
+  numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+  console.log(numeroAleatorio);
+  let msjComparar = document.getElementById("msjComparar");
+  msjComparar.innerHTML = `Juego Iniciado`;
+  let btnCompararNumero = document.getElementById("btnCompararNumero");
+  btnCompararNumero.addEventListener("click", function () {
+    let inputNumero = document.getElementById("inputNumber");
+    let numero = inputNumero.value;
+    if (numero >= 1 && numero <= 10) {
+      if (numero == numeroAleatorio) {
+        msjComparar.innerHTML = `Acertaste el numero es ${numero}`;
+      } else if (numero > numeroAleatorio) {
+        msjComparar.innerHTML = `El numero ingresado(${numero}) es mayor al generado`;
+      } else {
+        msjComparar.innerHTML = `El numero ingresado(${numero}) es menor al generado`;
+      }
+    } else {
+      msjComparar.innerHTML = `Recuerde que debe ingresar un Numero entre 1 y 10`;
     }
-}
+  });
+});
