@@ -4,22 +4,60 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>JS - TP5 - Ejercicio 1</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./img/JavaScript.png" />
   </head>
   <body>
-    <div class="container text-center">
-      <h1>Vamos a Jugar!</h1>
-      <p id="textoInformativo">Presione el Botón para Comenzar</p>
-      <button type="button" id="btnComenzar" class="btn btn-outline-danger btn-lg">Comenzar el Juego!</button>
-      <input type="text" id="numeroGuardado" placeholder="Ingrese un Numero" />
-      <button id="btnNumero" class="btn btn-outline-primary btn-lg">Enviar</button>
+    <div class="d-flex flex-column vh-100">
+      <header></header>
+      <main
+        class="container flex-grow-1 text-center d-flex flex-column justify-content-center align-items-center text-white"
+      >
+        <h1>Adivina el Numero!</h1>
+        <p>
+          Objetivo: <br />
+          Presiona el Boton Comenzar y se generara un numero que debes adivinar
+          del 1 al 10
+        </p>
+        <button type="button" id="btnComenzarJuego" class="btn btn-dark mb-3">
+          Comenzar Juego
+        </button>
+        <div class="input-group-lg mb-3">
+          <input
+            type="number"
+            id="inputNumber"
+            class="form-control"
+            min="1"
+            max="10"
+          />
+        </div>
+        <button type="button" id="btnCompararNumero" class="btn btn-dark mb-3">
+          Comparar
+        </button>
+        <div class="text-center">
+          <p class="fs-5" id="msjComparar"></p>
+        </div>
+      </main>
+      <footer class="bg-dark">
+        <div class="container">
+          <p class="text-center py-4 text-white">
+            &copy; Todos los derechos reservados
+          </p>
+        </div>
+      </footer>
     </div>
   </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
   <script src="./js/app.js"></script>
 </html>
